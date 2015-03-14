@@ -16,18 +16,16 @@ void itemsTable();
 
 int main(int argc, char** argv) 
 {
-	
 	double goodsPriceArray[5] = {1.1, 2.2, 3.9, 5.6, 10.2};
 	string goodsNameArray[5] = {"Milk", "Lollies", "Tomato Paste", "Butter", "Chips"};
 	string attempName[3] = {"first", "second", "last"};
 	
 	bool itemCheck[5] = {false, false, false, false, false};
+	bool hiddenBullseyeFlag = false;
 	
 	int playerAttemts;
 	int goodsSelection;
 	int goodsGuess;
-	
-	bool hiddenBullseyeFlag = false;
 	
 	double totalPrice;
 	
@@ -44,7 +42,8 @@ int main(int argc, char** argv)
 	cout << "-------------------------------------------------------------------------------" << endl;
 	
 	
-	cout << "Choose an item. \nGuess how many of that item will have a total between $10 and $12. If you get it correct you win. \nYou have 3 chances." << endl;
+	cout << "Choose an item. \nGuess how many of that item will have a total between $10 and $12. " 
+	     << "If you get it correct you win. \nYou have 3 chances." << endl;
 	cout << "Any total value between $2-12 is lands on the board." << endl;
 	
 	system("pause");
@@ -54,7 +53,6 @@ int main(int argc, char** argv)
 		system("cls");
 		
 		itemsTable();
-		
 		cout << "---------------------\n" << endl;
 		cout << "Select " << attempName[i] << " item." << endl;
 		
@@ -89,11 +87,6 @@ int main(int argc, char** argv)
 		cout << goodsNameArray[goodsSelection -1] << " costs $" << goodsPriceArray[goodsSelection -1] << endl;
 		system("pause");
 		cout << "Total cost is $" << totalPrice << endl;
-		
-		if(totalPrice >=2 || totalPrice < 10 )
-		{
-			
-		}
 		
 		if( totalPrice >= 10 && totalPrice <= 12 )
 		{
